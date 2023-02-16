@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8e1cc215-76fb-4a70-a928-0b59124307ec/appservices/subscriptions/8e1cc215-76fb-4a70-a928-0b59124307ec/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/DisplayIDBrowser",
+    "appService.deploySubpath": "."
+}
