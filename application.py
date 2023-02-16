@@ -28,4 +28,5 @@ def show_dir(dir):
     return render_template('dir.html', images=images_in_dir, dir=dir)
 
 if __name__ == '__main__':
-    app.run(port=8000, debug=False)
+    from waitress import serve
+    serve(app, host='0.0.0.0', port=8000)    
