@@ -975,6 +975,11 @@
         "used": false
     },
     {
+        "id": "2281",
+        "path": "animal",
+        "used": true
+    },
+    {
         "id": "2289",
         "path": "animal",
         "used": false
@@ -1556,6 +1561,16 @@
     },
     {
         "id": "320",
+        "path": "animal",
+        "used": true
+    },
+    {
+        "id": "3200",
+        "path": "animal",
+        "used": true
+    },
+    {
+        "id": "3201",
         "path": "animal",
         "used": true
     },
@@ -2615,11 +2630,6 @@
         "used": true
     },
     {
-        "id": "1545",
-        "path": "centaur",
-        "used": true
-    },
-    {
         "id": "172",
         "path": "centaur",
         "used": true
@@ -2767,16 +2777,6 @@
     {
         "id": "901",
         "path": "critter",
-        "used": true
-    },
-    {
-        "id": "1013",
-        "path": "demon",
-        "used": true
-    },
-    {
-        "id": "1014",
-        "path": "demon",
         "used": true
     },
     {
@@ -3813,11 +3813,6 @@
         "id": "4115",
         "path": "dwarf-female",
         "used": true
-    },
-    {
-        "id": "756",
-        "path": "dwarf-female",
-        "used": false
     },
     {
         "id": "115",
@@ -5385,11 +5380,6 @@
         "used": true
     },
     {
-        "id": "962",
-        "path": "dwarf-male",
-        "used": false
-    },
-    {
         "id": "1068",
         "path": "elemental",
         "used": true
@@ -5730,27 +5720,12 @@
         "used": false
     },
     {
-        "id": "2281",
-        "path": "furbolg",
-        "used": true
-    },
-    {
         "id": "3024",
         "path": "furbolg",
         "used": true
     },
     {
         "id": "3028",
-        "path": "furbolg",
-        "used": true
-    },
-    {
-        "id": "3200",
-        "path": "furbolg",
-        "used": true
-    },
-    {
-        "id": "3201",
         "path": "furbolg",
         "used": true
     },
@@ -6233,6 +6208,11 @@
         "id": "1101",
         "path": "gnome-male",
         "used": false
+    },
+    {
+        "id": "1545",
+        "path": "gnome-male",
+        "used": true
     },
     {
         "id": "1563",
@@ -11450,6 +11430,11 @@
         "used": true
     },
     {
+        "id": "962",
+        "path": "human-male",
+        "used": false
+    },
+    {
         "id": "1067",
         "path": "human-misc",
         "used": false
@@ -14358,6 +14343,16 @@
         "id": "3825",
         "path": "quillboar",
         "used": false
+    },
+    {
+        "id": "1013",
+        "path": "satyr",
+        "used": true
+    },
+    {
+        "id": "1014",
+        "path": "satyr",
+        "used": true
     },
     {
         "id": "2007",
@@ -18006,6 +18001,11 @@
     },
     {
         "id": "753",
+        "path": "Untextured",
+        "used": false
+    },
+    {
+        "id": "756",
         "path": "Untextured",
         "used": false
     },
