@@ -20,12 +20,15 @@ def show_dirs():
 @app.route("/<string:dir>")
 def show_dir(dir):
     images_in_dir = []
+    dirs = []
 
     for image in images:
+        if image['path'] not in dirs:
+            dirs.append(image['path'])  
         if image['path'] == dir:
             images_in_dir.append(image)
 
-    return render_template('dir.html', images=images_in_dir, dir=dir)
+    return render_template('dir.html', images=images_in_dir, dir=dir, dirs=dirs)
 
 if __name__ == '__main__':
     from waitress import serve
