@@ -9,13 +9,26 @@
 </head>
 
 <body>
-    <ul class="list-group">
-        {% for key in dirs %}
-        <li class="list-group-item">
-            <a href="/{{ key }}">{{ key }}</a>
-        </li>
+    <div class="container text-center mt-5 mb-5">
+        {% for key in dirs | batch(8, '&nbsp;') %}
+        <div class="row">
+            {% for dir in key %}
+            <div class="col">
+                {% if dir != '&nbsp;' %}
+                <div>
+                    <a href="/{{ dir }}">
+                        <img src="/static/folder.svg" width="75">
+                    </a>
+                </div>
+                <div>
+                    {{ dir }}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
         {% endfor %}
-    </ul>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
