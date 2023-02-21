@@ -22,7 +22,7 @@
                     </a>
                 </div>
                 <div class="mt-1">
-                    {{ image.id }}{%if image.used == false %} <span class="badge text-bg-danger">Unused</span>{% endif %}
+                    {{ image.id }}{%if image.used == false %} <span class="badge text-bg-danger">Unused</span>{% else %} <span class="badge text-bg-success">Used by {{ image.used_by|length }}</span>{% endif %}
                 </div>
                 {% endif %}
             </div>
