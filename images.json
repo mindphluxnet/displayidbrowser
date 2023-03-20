@@ -803,8 +803,13 @@
     {
         "id": "1231",
         "path": "Animal",
-        "used": false,
-        "used_by": []
+        "used": true,
+        "used_by": [
+            {
+                "name": "Arra'chea",
+                "scale": 1.0
+            }
+        ]
     },
     {
         "id": "1232",
@@ -4183,6 +4188,10 @@
                 "scale": 1.0
             },
             {
+                "name": "Taloned Swoop",
+                "scale": 1.0
+            },
+            {
                 "name": "Spiteflayer",
                 "scale": 1.6
             }
@@ -5187,6 +5196,10 @@
         "used_by": [
             {
                 "name": "Lupos",
+                "scale": 1.0
+            },
+            {
+                "name": "Timber",
                 "scale": 1.0
             },
             {
@@ -9594,10 +9607,6 @@
         "used": true,
         "used_by": [
             {
-                "name": "Pilot Stonegear",
-                "scale": 1.0
-            },
-            {
                 "name": "Pilot Hammerfoot",
                 "scale": 1.0
             },
@@ -11528,8 +11537,13 @@
     {
         "id": "3232",
         "path": "Dwarf-male",
-        "used": false,
-        "used_by": []
+        "used": true,
+        "used_by": [
+            {
+                "name": "Pilot Stonegear",
+                "scale": 1.0
+            }
+        ]
     },
     {
         "id": "3238",
@@ -13064,10 +13078,6 @@
         "used_by": [
             {
                 "name": "Bow Guy",
-                "scale": 1.0
-            },
-            {
-                "name": "Race Master Kronkrider",
                 "scale": 1.0
             }
         ]
@@ -15717,8 +15727,13 @@
     {
         "id": "1101",
         "path": "Gnome-male",
-        "used": false,
-        "used_by": []
+        "used": true,
+        "used_by": [
+            {
+                "name": "Captured Leper Gnome",
+                "scale": 1.15
+            }
+        ]
     },
     {
         "id": "1563",
@@ -15827,8 +15842,13 @@
     {
         "id": "2490",
         "path": "Gnome-male",
-        "used": false,
-        "used_by": []
+        "used": true,
+        "used_by": [
+            {
+                "name": "Captured Leper Gnome",
+                "scale": 1.15
+            }
+        ]
     },
     {
         "id": "2581",
@@ -16161,6 +16181,10 @@
             {
                 "name": "[PH] Ruppo Zipcoil",
                 "scale": 1.15
+            },
+            {
+                "name": "Captured Leper Gnome",
+                "scale": 1.15
             }
         ]
     },
@@ -16270,6 +16294,10 @@
         "used_by": [
             {
                 "name": "Leper Gnome",
+                "scale": 1.15
+            },
+            {
+                "name": "Captured Leper Gnome",
                 "scale": 1.15
             }
         ]
@@ -21410,8 +21438,13 @@
     {
         "id": "752",
         "path": "Human-female",
-        "used": false,
-        "used_by": []
+        "used": true,
+        "used_by": [
+            {
+                "name": "Clarise Gnarltree",
+                "scale": 1.0
+            }
+        ]
     },
     {
         "id": "753",
@@ -37137,10 +37170,6 @@
         "used": true,
         "used_by": [
             {
-                "name": "Bristleback Shaman",
-                "scale": 1.0
-            },
-            {
                 "name": "Bristleback Hunter",
                 "scale": 1.0
             },
@@ -37278,6 +37307,10 @@
         "used_by": [
             {
                 "name": "Bristleback Quilboar",
+                "scale": 1.0
+            },
+            {
+                "name": "Bristleback Shaman",
                 "scale": 1.0
             }
         ]
@@ -38360,7 +38393,7 @@
         "used": true,
         "used_by": [
             {
-                "name": "Shambling Skeleton UNUSED",
+                "name": "Shambling Skeleton",
                 "scale": 1.0
             },
             {
@@ -38762,6 +38795,10 @@
         "path": "Scourge",
         "used": true,
         "used_by": [
+            {
+                "name": "Eliza",
+                "scale": 1.0
+            },
             {
                 "name": "Freezing Ghoul",
                 "scale": 1.0
@@ -40314,6 +40351,10 @@
             {
                 "name": "[UNUSED] Narache Guard",
                 "scale": 1.0
+            },
+            {
+                "name": "Melor Stonehoof",
+                "scale": 1.35
             },
             {
                 "name": "Horde Guard",
