@@ -30,6 +30,12 @@ def show_dir(dir):
 
     return render_template('dir.html', images=images_in_dir, dir=dir, dirs=dirs)
 
+@app.route("/api/usedby/<string:displayid>")
+def get_used_by(displayid):
+
+    for image in images:
+        if image['id'] == displayid:
+            return json.dumps(image['used_by'])
 
 if __name__ == '__main__':
     from waitress import serve
