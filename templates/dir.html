@@ -18,7 +18,7 @@
                 {% if image != '&nbsp;' %}
                 <div>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#lightbox" data-bs-displayid="{{ image.id }}" data-bs-dir="{{ dir }}" data-bs-usedby="{{ image.used_by|tojson}}">
-                        <img width="200" height="200" src="https://displayidbrowser.blob.core.windows.net/$web/images/{{ dir }}/{{ image.id }}.jpg">
+                        <img width="200" height="200" src="https://displayidbrowser.mindphlux.net/images/{{ dir }}/{{ image.id }}.jpg">
                     </a>
                 </div>
                 <div class="mt-1">
@@ -63,7 +63,7 @@
             const _title = _modal.querySelector('#title')
             _image.src = "";
             const _leftcol = _modal.querySelector('#leftcol');
-            _image.src = `https://displayidbrowser.blob.core.windows.net/$web/images/${_dir}/${_displayid}.png`;
+            _image.src = `https://displayidbrowser.mindphlux.net/images/${_dir}/${_displayid}.png`;
             _title.innerHTML = "Display ID: " + _displayid;
 
             var _usedby = fetch('/api/usedby/' + _displayid)
