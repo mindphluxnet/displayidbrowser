@@ -5,7 +5,6 @@ RUN mkdir /app/static
 WORKDIR /app
 ADD requirements.txt /app
 ADD application.py /app
-ADD images.json /app
 ADD static/ /app/static
 ADD templates/ /app/templates
 RUN pip install -r requirements.txt
