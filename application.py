@@ -1,10 +1,14 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 import json
+import urllib.request
 
 app = Flask(__name__)
 
-images = json.load(open('images.json'))
+images = None
 
+def load_data():
+    with urllib.request.urlopen("https://displayidbrowser.mindphlux.net/images.json") as url:
+        return json.load(url)
 
 @app.route('/')
 def show_dirs():
@@ -37,6 +41,12 @@ def get_used_by(displayid):
         if image['id'] == displayid:
             return json.dumps(image['used_by'])
 
+@app.route("/update")
+def update():
+    images = load_data()
+    return redirect("http://www.displayidbrowser.com")
+
 if __name__ == '__main__':
+    images = load_data()
     from waitress import serve
     serve(app, host='0.0.0.0', port=8000)
