@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect
 import json
 import urllib.request
 
@@ -10,29 +10,41 @@ def load_data():
     with urllib.request.urlopen("https://displayidbrowser.mindphlux.net/images.json") as url:
         return json.load(url)
 
+def check_maintenance():
+    try:
+        with urllib.request.urlopen("https://displayidbrowser.mindphlux.net/maintenance") as url:
+            return True
+    except:
+        return False
+
 @app.route('/')
 def show_dirs():
-    dirs = []
+    if not check_maintenance():
+        dirs = []
 
-    for image in images:
-        if image['path'] not in dirs:
-            dirs.append(image['path'])
+        for image in images:
+            if image['path'] not in dirs:
+                dirs.append(image['path'])
 
-    return render_template('index.html', dirs=dirs)
-
+        return render_template('index.html', dirs=dirs)
+    else:
+        return render_template('maintenance.html')
 
 @app.route("/<string:dir>")
 def show_dir(dir):
-    images_in_dir = []
-    dirs = []
+    if not check_maintenance():
+        images_in_dir = []
+        dirs = []
 
-    for image in images:
-        if image['path'] not in dirs:
-            dirs.append(image['path'])
-        if image['path'] == dir:
-            images_in_dir.append(image)
+        for image in images:
+            if image['path'] not in dirs:
+                dirs.append(image['path'])
+            if image['path'] == dir:
+                images_in_dir.append(image)
 
-    return render_template('dir.html', images=images_in_dir, dir=dir, dirs=dirs)
+        return render_template('dir.html', images=images_in_dir, dir=dir, dirs=dirs)
+    else:
+        return render_template('maintenance.html')
 
 @app.route("/api/usedby/<string:displayid>")
 def get_used_by(displayid):
