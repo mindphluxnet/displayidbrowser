@@ -22,7 +22,7 @@
                     </a>
                 </div>
                 <div class="mt-1">
-                    {{ image.id }}{%if image.used == false %} <span class="badge text-bg-danger">Unused</span>{% else %} <span class="badge text-bg-success">Used by {{ image.used_by|length }}</span>{% endif %}
+                    {{ image.id }}{%if image.used == false %} <span class="badge text-bg-danger">Unused</span>{% else %} <span class="badge text-bg-{{ image.color }}">Used by {{ image.used_by|length }}</span>{% endif %}
                 </div>
                 {% endif %}
             </div>
@@ -75,8 +75,8 @@
                         if (element.subname != '') {
                             inject = ` &lt;${element.subname}&gt;</span>`;
                         }
-
-                        _leftcol.innerHTML += `<div class="mb-2"><span style="font-size: 0.75rem;">${element.entry} ${element.name}${inject}</span> <span class="badge rounded-pill text-bg-info">Scale ${element.scale.toFixed(1)}x</span></div>`;
+                        var color = element.not_in_alpha ? 'warning' : 'success';
+                        _leftcol.innerHTML += `<div class="mb-2"><span style="font-size: 0.75rem;">${element.entry} ${element.name}${inject}</span> <span class="badge rounded-pill text-bg-${color}">Scale ${element.scale.toFixed(1)}x</span></div>`;
                     });
 
                     if (_leftcol.innerHTML == '') {
